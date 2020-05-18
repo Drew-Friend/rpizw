@@ -19,7 +19,7 @@ def printSquare():                              #display the board
     print(squares[8] )
 
 def moveCheck(choice):                          #check validity of move
-    if choice > 0 and choice < 9 and squares[choice-1] == "_":
+    if choice > 0 and choice < 10 and squares[choice-1] == "_":
         return True
     else:
         return False
