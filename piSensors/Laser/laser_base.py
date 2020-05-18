@@ -17,14 +17,14 @@ xshut = []
 # list of lasers
 vl53 = []
 
-for power_pin in xshut:
-    # makes each xshut pin an output, set to low
-    power_pin.switch_to_output(value=False)
-# all VL53L0X sensors are now off
 
 
 # changes the addresses of the VL53L0X sensors
 def set_addresses():
+    for power_pin in xshut:
+        # makes each xshut pin an output, set to low
+        power_pin.switch_to_output(value=False)
+        # all VL53L0X sensors are now off
     for i, power_pin in enumerate(xshut):
         power_pin.value = True
         # instantiate the VL53L0X sensor on the I2C bus & insert it into the "vl53" list
