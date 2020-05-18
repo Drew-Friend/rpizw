@@ -29,7 +29,7 @@ def set_addresses():
         power_pin.value = True
         # instantiate the VL53L0X sensor on the I2C bus & insert it into the "vl53" list
         vl53.insert(i, VL53L0X(i2c)) 
-        if i < len(xshut):
+        if i < len(xshut)-1:
             # default address is 0x29
             vl53[i].set_address(i + 0x30)  # address assigned should NOT be already in use
 
