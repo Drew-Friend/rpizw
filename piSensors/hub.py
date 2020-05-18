@@ -1,5 +1,6 @@
 from Laser import laser_base
 from digitalio import DigitalInOut
+import board
 
 xshut = laser_base.xshut
 lasers = laser_base.vl53
