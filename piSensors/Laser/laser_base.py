@@ -33,7 +33,10 @@ def set_addresses():
             # default address is 0x29
             vl53[i].set_address(i + 0x30)  # address assigned should NOT be already in use
 
-
+def reset_addresses():
+    for i, power_pin in enumerate(xshut):
+        power_pin.value = True
+    vl53[i].set_address(0x29)
 
 def detect_range(count=5):
     """ take count=5 samples """
@@ -46,3 +49,4 @@ def detect_range(count=5):
 xshut.append(DigitalInOut(board.D4))
 set_addresses()
 detect_range()
+reset_addresses()
