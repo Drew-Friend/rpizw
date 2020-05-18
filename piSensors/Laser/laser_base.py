@@ -42,7 +42,7 @@ def detect_range(count=5):
     """ take count=5 samples """
     while count:
         for index, sensor in enumerate(vl53):
-            print("Sensor {} Range: {}mm, Address {}".format(index + 1, sensor.range, sensor.address))
+            print("Sensor {} Range: {}mm".format(index + 1, sensor.range))
         time.sleep(1.0)
         count -= 1
 
