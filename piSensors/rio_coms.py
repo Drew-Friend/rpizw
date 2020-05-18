@@ -15,4 +15,4 @@ def disabled():
 
 def send_value(value):
     print("Value {}".format(value))
-    rio.write(value.encode('utf-8')
+    rio.write(str(value).encode('ascii'))
