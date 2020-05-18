@@ -15,7 +15,7 @@ i2c = board.I2C()
 
 # declare the digital output pins connected to the "SHDN" pin on each VL53L0X sensor
 xshut = [
-    DigitalInOut(board.D4),
+    DigitalInOut(board.D5),
     DigitalInOut(board.D7),
     # add more VL53L0X sensors by defining their SHDN pins here
 ]
