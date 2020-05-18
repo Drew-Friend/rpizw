@@ -2,5 +2,5 @@ import rangefinder
 from rangefinder import xshut
 
 
-xshut.insert[3]
+xshut.insert[4]
 rangefinder.setup
