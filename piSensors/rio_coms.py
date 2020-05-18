@@ -1,12 +1,12 @@
 import board
 import serial
 
-standin = False
 print("about to serial")
 rio = serial.Serial('/dev/ttyAMA0', 9600, timeout = 0, write_timeout = 0)
+standin = rio.read()
 
 def disabled():
-    if (rio.read()).decode('utf-8') is not None:
+    if rio.read() is not standin:
         print((rio.read()).decode('utf-8'))
         return True
     else:
