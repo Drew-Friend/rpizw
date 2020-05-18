@@ -13,5 +13,5 @@ def disabled():
 
 
 def send_value(value):
-    rio.write(value)
     print("Value {}".format(value))
+    rio.write(value)
