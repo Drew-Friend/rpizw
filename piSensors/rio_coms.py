@@ -15,4 +15,4 @@ def disabled():
 
 def send_value(value):
     print("Value {}".format(value))
-    rio.write(bytearray(str(value)))
+    rio.write([value])
