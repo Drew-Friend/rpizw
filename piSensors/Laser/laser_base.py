@@ -7,8 +7,8 @@ active range readings is about 19 mA per sensor).
 """
 import time
 import board
+import adafruit_vl53l0x.py.VL53L0X
 from digitalio import DigitalInOut
-from piSensors.Laser.adafruit_vl53l0x.py import VL53L0X
 
 # declare the singleton variable for the default I2C bus
 i2c = board.I2C()
