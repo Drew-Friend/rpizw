@@ -45,8 +45,3 @@ def detect_range(count=5):
             print("Sensor {} Range: {}mm".format(index + 1, sensor.range))
         time.sleep(1.0)
         count -= 1
-
-xshut.append(DigitalInOut(board.D4))
-set_addresses()
-detect_range()
-reset_addresses()
