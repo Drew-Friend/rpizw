@@ -1,4 +1,4 @@
-from .Laser import laser_base
+from piSensors.Laser import laser_base
 xshut = laser_base.xshut
 lasers = laser_base.vl53
 
