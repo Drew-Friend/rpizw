@@ -44,3 +44,13 @@ def distance(laserNum):
     """get current distace of a specific laser"""
     dist = vl53[laserNum].range
     return dist
+
+def proxy(laserNum, baseVal):
+    """ 
+    if lasers are used as proxes, as they are on Bampas. 
+    Returns true if there is something close enough
+    """
+    if (vl53[laserNum].range/10) < baseVal:
+        return True
+    else:
+        return False
