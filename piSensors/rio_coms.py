@@ -6,7 +6,7 @@ print("about to serial")
 rio = serial.Serial('/dev/ttyAMA0', 9600, timeout = 0, write_timeout = 0)
 
 def disabled():
-    if rio.read() is not 'b''':
+    if (rio.read()).decode('utf-8') is not None:
         print((rio.read()).decode('utf-8'))
         return True
     else:
