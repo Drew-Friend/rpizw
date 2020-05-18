@@ -14,9 +14,11 @@ print("setup over")
 while enabled:
     if rio_coms.disabled():
         enabled = False
-    print("sending value")
-    rio_coms.send_value(laser_base.distance(0))
+    else:
+        print("sending value")
+        rio_coms.send_value(laser_base.distance(0))
 
 
 #it'd be cool to throw rainbow led code in here
+print("ended")
 laser_base.reset_addresses()
