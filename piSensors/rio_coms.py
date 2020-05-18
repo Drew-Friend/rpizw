@@ -2,6 +2,7 @@ import board
 import serial
 
 standin = False
+print("about to serial")
 rio = serial.Serial('/dev/ttyAMA0', 9600)
 
 def disabled():
