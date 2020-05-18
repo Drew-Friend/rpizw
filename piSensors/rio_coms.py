@@ -6,7 +6,7 @@ print("about to serial")
 rio = serial.Serial('/dev/ttyAMA0', 9600, timeout = 0)
 
 def disabled():
-    if rio.read() is 'D':
+    if rio.read(1) is 'D':
         print("Disabled")
         return True
     else:
