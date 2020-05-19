@@ -7,7 +7,9 @@ xshut = laser_base.xshut
 lasers = laser_base.vl53
 enabled = True
 
-xshut.append(DigitalInOut(board.D4))
+xshut.append(DigitalInOut(board.D21))
+xshut.append(DigitalInOut(board.D20))
+
 laser_base.set_addresses()
 
 print("setup over")
