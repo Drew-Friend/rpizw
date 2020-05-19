@@ -19,7 +19,7 @@ while enabled:
     else:
         print("sending value")
         for i in range(len(lasers)):
-            rio_coms.send_value(laser_base.distance(i))
+            rio_coms.send_value(int(laser_base.distance(i)))
 
 
 #it'd be cool to throw rainbow led code in here
