@@ -16,7 +16,8 @@ while enabled:
         enabled = False
     else:
         print("sending value")
-        rio_coms.send_value(laser_base.distance(0))
+        for i in enumerate(xshut):
+            rio_coms.send_value(laser_base.distance(i))
 
 
 #it'd be cool to throw rainbow led code in here

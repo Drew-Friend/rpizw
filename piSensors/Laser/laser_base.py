@@ -43,8 +43,8 @@ def detect_range(count=5):
 def distance(laserNum):
     """get current distace of a specific laser"""
     dist = vl53[laserNum].range/10
-    if dist > 200:
-        dist = 200
+    if dist > 250:
+        dist = 250
     return dist
 
 def proxy(laserNum, baseVal):
