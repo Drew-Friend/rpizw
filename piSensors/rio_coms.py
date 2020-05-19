@@ -6,8 +6,8 @@ rio = serial.Serial('/dev/ttyAMA0', 9600, timeout = 0, write_timeout = 0)
 standin = rio.read()
 
 def disabled():
+    print((rio.read()).decode('utf-8'))
     if rio.read() is not standin:
-        print((rio.read()).decode('utf-8'))
         return True
     else:
         return False
